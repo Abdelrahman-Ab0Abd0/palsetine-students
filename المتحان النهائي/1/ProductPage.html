@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: 'Arial Narrow', Arial, sans-serif;
+      }
+      header {
+        display: flex;
+        padding: 30px;
+        justify-content: space-between;
+      }
+      header nav ul.links {
+        list-style: none;
+        display: flex;
+      }
+      header nav ul.links a {
+        text-decoration: none;
+        font-size: 17px;
+        margin-right: 20px;
+        color: black;
+      }
+      header nav ul.links a:hover {
+        font-weight: bold;
+        text-decoration: underline;
+      }
+      .product {
+        display: flex;
+        margin-top: 100px;
+      }
+      .product  .product-image{
+        transition: 0.3s;
+      }
+      .product  .product-image:hover{
+        scale: 1.1;
+      }
+      .product-info {
+        width: 500px;
+        z-index: 3;
+      }
+      .product-info > div {
+        margin-bottom: 30px;
+      }
+      .product-info .product-title {
+        font-size: 30px;
+        margin-bottom: 30px;
+      }
+      .product-info .price {
+        margin-bottom: 20px;
+      }
+      .product-info .paragraph p{
+        font-size: 15px;
+
+      }
+      .sizes-select .title,
+      .colors-select .title {
+        margin-bottom: 10px;
+      }
+      .sizes-select .selects,
+      .colors-select .selects {
+        display: flex;
+      }
+      .sizes-select .size{
+        padding: 15px;
+        border: 1px solid gray;
+        border-radius: 5px;
+        font-size: 15px;
+        color: gray;
+        margin-right: 15px;
+      }
+      .sizes-select .size span {
+        display: block;
+        font-weight: bold;
+        color: black;
+      }
+      .colors-select .color{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 15px;
+      }
+      .colors-select .color.pink{
+        background-color: pink;
+      }
+      .colors-select .color.white{
+        background-color: rgb(211, 211, 211);
+      }
+      .colors-select .color.brown{
+        background-color: rgb(177, 123, 62);
+      }
+      .buy-buttons button {
+        border-radius: 20px;
+        padding: 10px 20px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .buy-buttons .buy {
+        background-color: #000;
+        color: #fff;
+        
+      }
+      .buy-buttons span {
+        font-weight: bold;
+        margin: 0 15px;
+        color: #777;
+      }
+      .buy-buttons .later:hover {
+        background-color: #000;
+        color: #fff;
+      }
+      .buy-buttons .buy:hover {
+        background-color: #fff;
+        color: #000;
+      }
+      .product-discription  ul.description li{
+        margin-bottom: 10px;
+        color: #777;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container">
+      <div class="logo"><img src="الصور/logo.png" alt="logo"></div>
+      <nav class="links">
+        <ul class="links">
+          <li><a href="">Sunglasses</a></li>
+          <li><a href="">Glasses</a></li>
+          <li><a href="">Lenses</a></li>
+          <li><a href="">Brands</a></li>
+          <li><a href="mailto:affyf@gmail.com">Support</a></li>
+          <li><a href="Login.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="product">
+        <div class="product-image">
+          <img src="الصور/rectangle-1-4.png" alt="">
+        </div>
+        <div class="product-info">
+          <h1 class="product-title">Morgan</h1>
+          <h2 class="price">€275*</h2>
+          <div class="paragraph">
+            <p>incl. local Tax & Shipping.</p>
+            <br>
+            <p>Sleek and timeless. Titanium glasses with an innovative bridge. A frame to suit every face, Morgan is a classic 'panto' shape.</p>
+          </div>
+          <div class="sizes-select">
+            <div class="title">
+              <h4>Select Size</h4>
+            </div>
+            <div class="selects">
+              <div class="size">
+                <span>134mm</span>
+                Medium
+              </div>
+              <div class="size">
+                <span>160mm</span>
+                Large
+              </div>
+              <div class="size">
+                <span>185mm</span>
+                Extra Large
+              </div>
+            </div>
+          </div>
+          <div class="colors-select">
+            <div class="title">
+              <h4>Select Color</h4>
+            </div>
+            <div class="selects">
+              <div class="color pink"></div>
+              <div class="color white"></div>
+              <div class="color brown"></div>
+            </div>
+          </div>
+          <div class="buy-buttons">
+            <button class="buy">Buy Now</button>
+            <span>or</span>
+            <button class="later">Try at home</button>
+          </div>
+          <div class="product-discription">
+            <ul class="description">
+              <li>99.7% pure titanium front</li>
+              <li>More than 4hv on the Vickers hardness test</li>
+              <li>Ion plated to over 0.3µ</li>
+              <li>Weighs under 5.0g</li>
+              <li>Adjustable titanium nose pads for a comfortable fit</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

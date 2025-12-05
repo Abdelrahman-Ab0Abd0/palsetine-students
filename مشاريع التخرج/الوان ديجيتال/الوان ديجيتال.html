@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css">
+    <title>شركة ألوان للتسويق الرقمي</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Tajawal", sans-serif;
+      }
+      header {
+        background-color: #00bcd4;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 20px;
+        transition: .5s;
+        display: block;
+      }
+      nav a:hover {
+        font-size: 25px;
+
+      }
+      .landing {
+        background: linear-gradient(135deg, #ffeb3b, #ff4081);
+        padding: 80px 20px;
+        text-align: center;
+        color: #222;
+
+      }
+      .landing h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+      .landing p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: auto;
+      }
+      .landing, .testimonials, .services, .contact {
+        padding: 60px 20px;
+        text-align: center;
+      }
+      h2.heading {
+        font-size: 30px;
+        color: #00bcd4;
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+        margin: 50px 0;
+      }
+      .services,
+      .testimonials .content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+      .service, .opinion {
+        background-color: #f9f9f9;
+        border: 2px solid #eee;
+        border-radius: 10px;
+        padding: 20px;
+        width: 250px;
+        color: #fff;
+      }
+      .service {
+        background-color: #ff4081;
+      }
+      .opinion {
+        background-color: #00bcd4;
+      }
+      .contact form {
+        max-width: 500px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .contact input,
+      .contact textarea {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .contact button {
+        padding: 10px;
+        background-color: #00bcd4;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .contact button:hover {
+        background-color: #fff;
+        color: #00bcd4;
+      }
+          .contact-info {
+      margin: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .address,
+    .phone,
+    .email {
+      align-items: center;
+      display: flex;
+      padding: 30px;
+      cursor: pointer;
+      transition: 0.2s;
+      font-weight: bold;
+      justify-content: space-around;
+    }
+    .address:hover,
+    .phone:hover,
+    .email:hover {
+      color: #ff4081;
+    }
+      footer {
+        background-color: #eee;
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9rem;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>ألوان ديجيتال</h1>
+      <nav>
+        <a href="#">الرئيسية</a>
+        <a href="#">خدماتنا</a>
+        <a href="#">آراء العملاء</a>
+        <a href="#">تواصل معنا</a>
+      </nav>
+    </header>
+    <main>
+      <section id="home">
+        <div class="landing">
+        <h1>نصمم أفكارك بلون رقمي جذاب</h1>
+        <p>
+          نساعدك على تحويل أفكارك إلى مشاريع رقمية ناجحة بألوان مبهجة وتقنيات
+          حديثة
+        </p>
+      </div>
+    </section>
+    <section id="services">
+      <h2 class="heading">خدماتنا</h2>
+      <div class="services">
+        <div class="service">
+          <h3>إدارة التواصل</h3>
+          <p>نصمم ونشغل محتوى تفاعلي يجذب جمهورك باستمرار</p>
+        </div>
+        <div class="service">
+          <h3>تصميم الحملات</h3>
+          <p>ننفذ إعلانات مبتكرة بألوان نابضة على جميع المنصات</p>
+        </div>
+        <div class="service">
+          <h3>تحسين الظهور (SEO)</h3>
+          <p>نرفع ترتيبك بأساليب مرئية ومحتوى جذاب</p>
+        </div>
+        <div class="service">
+          <h3>تحليلات متقدمة</h3>
+          <p>نرسم البيانات بألوان توضيحية لتبسيط القرارات</p>
+        </div>
+      </div>
+    </section>
+    <section class="testimonials">
+      <h2 class="heading">آراء العملاء</h2>
+      <div class="content">
+        <div class="opinion">
+          <p>"أفضل شركة تعاملت معها، تصميمات نابضة بالحياة!"</p>
+          <strong>- آية، مصممة محتوى</strong>
+        </div>
+        <div class="opinion">
+          <p>"ساعدوني في إطلاق أول حملة ناجحة لمتجري"</p>
+          <strong>- عمرو، رائد أعمال</strong>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <h2 class="heading">تواصل معنا</h2>
+      <form>
+        <input type="text" placeholder="الاسم الكامل"  />
+        <input type="email" placeholder="البريد الإلكتروني"  />
+        <input type="text" placeholder="موضوع الرسالة"  />
+        <textarea rows="5" placeholder="رسالتك" ></textarea>
+        <button type="submit">إرسال</button>
+      </form>
+      <div class="contact-info">
+              <div class="address">
+                <i class="fa-solid fa-location-dot"></i>
+                <div class="text">123 Street,New York, USA</div>
+              </div>
+              <div class="phone">
+                <i class="fa-solid fa-phone"></i>
+                <div class="text">+012 345 67890</div>
+              </div>
+              <div class="email">
+                <i class="fa-solid fa-envelope"></i>
+                <div class="text">info@example.com</div>
+              </div>
+            </div>
+    </section>
+  </main>
+    <footer>
+      <p>© 2025 شركة ألوان للتسويق الرقمي</p>
+      <p>تابعنا: فيسبوك | تويتر | إنستغرام</p>
+    </footer>
+  </body>
+  </html>
+  

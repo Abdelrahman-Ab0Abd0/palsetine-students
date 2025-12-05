@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      body {
+        font-family: "Arial Narrow", Arial, sans-serif;
+        margin: 0 auto;
+        padding: 0 auto;
+        padding: 20px;
+        width: 1170px;
+      }
+
+      header img {
+        border-radius: 5px;
+        height: 400px;
+        width: 1200px;
+      }
+      h1.heading {
+        font-size: 30px;
+      }
+      input {
+        display: block;
+        border: none;
+        outline: none;
+        padding: 10px 20px;
+      }
+      form {
+        font-size: 20px;
+        width: 500px;
+      }
+      form > div {
+        margin-bottom: 30px;
+      }
+      label {
+        display: block;
+        margin-bottom: 20px;
+      }
+      input::placeholder {
+        font-size: 18px;
+      }
+      .rememberMe {
+        display: flex;
+        align-items: center;
+      }
+      .rememberMe input {
+        margin-right: 15px;
+      }
+      input.submit {
+        width: 100%;
+        background-color: #f74545;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      p.loginWith {
+        color: #777;
+        margin-bottom: 20px;
+      }
+      .links-icons {
+        display: flex;
+        justify-content: space-between;
+    }
+   a {
+    display: block;
+   }
+    i  {
+        width: 200px;
+        height: 200px;
+    }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="الصور/banner.png" alt="" />
+    </header>
+    <main>
+      <h1>Welcome Back</h1>
+      <form>
+        <div class="name">
+          <label>User Name</label>
+          <input type="text" placeholder="User Name" />
+        </div>
+        <div class="password">
+          <label>Password</label>
+          <input type="password" placeholder="Password" />
+        </div>
+        <div class="rememberMe">
+          <label>Remember Me</label>
+          <input type="checkbox" />
+        </div>
+        <input type="submit" value="Login" class="submit" />
+      </form>
+      <p class="loginWith">or sign with</p>
+      <div class="links-icons">
+        <a href="http://facebook.com">
+            <i class="fa fa-facebook"></i>
+        </a>
+        <a href="">
+            <i class="fa fa-google-plus"></i>
+        </a>
+      </div>
+    </main>
+  </body>
+</html>

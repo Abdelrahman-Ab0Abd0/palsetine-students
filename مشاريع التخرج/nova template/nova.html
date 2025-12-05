@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nova markting</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    *:focus {
+      outline: none;
+    }
+
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: "Tajawal", sans-serif;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      padding: 0 15px;
+      margin: 0 auto;
+      width: 1170px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      min-height: 97px;
+      align-items: center;
+    }
+    header h1 {
+      height: 40px;
+      color: #19a0fa;
+    }
+    header nav {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    header nav .links-holder {
+      margin-right: 20px;
+    }
+    header nav .links-holder ul.links {
+      display: flex;
+      transition: 0.3s;
+    }
+    header nav .links-holder ul.links a {
+      display: block;
+      padding: 40px 10px;
+      color: #fff;
+      transition: 0.3s;
+      position: relative;
+      font-size: 14px;
+    }
+    header nav .links-holder ul.links a:hover,
+    header nav .links-holder ul.links a.active {
+      color: #19a0fa;
+    }
+    header nav .links-holder ul.links a:hover::before,
+    header nav .links-holder ul.links a.active::before {
+      background-color: #19a0fa;
+    }
+
+    header nav .form {
+      width: 40px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      border-left: 1px solid #fff;
+      color: #fff;
+      justify-content: flex-end;
+    }
+    header nav .form .search-icon {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .landing {
+      background-image: url(images/thirdImg.jpg);
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+    }
+    .landing .intro-text {
+      display: flex;
+      justify-content: flex-end;
+      width: 50%;
+      padding: 50px;
+      transform: translateY(-50%);
+      background-color: rgba(15, 96, 143, 0.808);
+      color: #fff;
+      z-index: 3;
+    }
+    .landing .intro-text .content {
+      max-width: 500px;
+    }
+    .landing .intro-text .content h2 {
+      font-size: 32px;
+      font-weight: normal;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    .landing .intro-text .content p {
+      line-height: 1.8;
+    }
+    .services {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+    .services .services-content .service-box {
+      display: flex;
+    }
+    .services .services-content .service-box .info {
+      margin-left: 50px;
+      font-size: 15px;
+    }
+    .services .services-content .service-box .info h3 {
+      color: #19a0fa;
+      margin-bottom: 30px;
+    }
+    .services .services-content .service-box .info p {
+      line-height: 2;
+      color: #777;
+    }
+    .services .services-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+      grid-column-gap: 40px;
+      grid-row-gap: 60px;
+    }
+
+    .contact-us {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+    .contact-us .container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .container > div {
+      margin-bottom: 30px;
+    }
+    .section-heading {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+    .section-heading h2 {
+      font-weight: normal;
+      font-size: 20px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .section-heading p {
+      line-height: 2;
+      color: #777;
+    }
+    .testimonials .content {
+      margin-bottom: 30px;
+      display: flex;
+    }
+    .testimonials .content img {
+      width: 100px;
+      height: 100%;
+      border-radius: 50%;
+      margin-right: 50px;
+    }
+    .testimonials .content .text {
+      border-bottom: 1px solid #ccc;
+      line-height: 2;
+      width: 100%;
+    }
+    .testimonials .content .text span {
+      display: block;
+      text-align: right;
+      color: #777;
+    }
+
+    .content {
+      display: flex;
+    }
+    .contact-us {
+      flex-basis: 40%;
+    }
+    .content {
+      display: flex;
+    }
+    .contact-us form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex-basis: 50%;
+    }
+    .contact-us input,
+    .contact-us textarea {
+      padding: 10px;
+      background-color: rgba(255, 255, 255, 0.158);
+      color: #19a0fa;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      caret-color: #fff;
+    }
+    .contact-us input::placeholder,
+    .contact-us textarea::placeholder {
+      color: #19a0fa;
+    }
+    .contact-us button {
+      padding: 10px;
+      background: #19a0fa;
+      color: #000;
+      border: none;
+      cursor: pointer;
+    }
+    .contact-us button:hover {
+      color: #19a0fa;
+      background-color: #fff;
+    }
+    .contact-info {
+      margin-left: 20px;
+      flex-basis: 50%;
+    }
+    .address,
+    .phone,
+    .email {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.2s;
+      font-weight: bold;
+      border-bottom: 1px solid transparent;
+    }
+    .address:hover,
+    .phone:hover,
+    .email:hover {
+      border-bottom: 1px solid #19a0fa;
+      color: #19a0fa;
+    }
+    footer {
+      background: #000;
+      color: #999;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+  <body>
+    <header class="container">
+      <h1>Nova Marketing</h1>
+      <nav>
+        <div class="links-holder">
+          <ul class="links">
+            <li><a href="#landing" class="active">الرئيسيه</a></li>
+            <li><a href="#services">خدماتنا</a></li>
+            <li><a href="#testimonials">اراء العملاء</a></li>
+            <li><a href="#contact">تواصل معنا</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="landing">
+        <div class="landing">
+          <div class="intro-text">
+            <div class="content">
+              <h2>نحن نبتكر حلولاً رقمية لمستقبل أفضل</h2>
+              <p>
+                نساعدك على تحويل أفكارك إلى مشاريع رقمية ناجحة بتقنيات حديثة
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="container" id="services">
+        <div class="services">
+          <div class="section-heading">
+            <h2>خدماتنا</h2>
+            <p>نساهم في تقديم افضل خدمه لعملائنا</p>
+          </div>
+          <div class="services-content">
+            <div class="service-box">
+              <i class="fa-solid fa-desktop fa-3x"></i>
+              <div class="info">
+                <h3>إدارة حسابات التواصل</h3>
+                <p>نساعدك في بناء وتطوير حضورك الرقمي على مختلف المنصات</p>
+              </div>
+            </div>
+            <div class="service-box">
+              <i class="fa-solid fa-pencil-ruler fa-3x"></i>
+              <div class="info">
+                <h3>تصميم الحملات الإعلانية</h3>
+                <p>خطط إعلانية مخصصة تحقق نتائج فعلية لنشاطك التجاري</p>
+              </div>
+            </div>
+            <div class="service-box">
+              <i class="fa-solid fa-search fa-3x"></i>
+              <div class="info">
+                <h3>تحسين محركات البحث (SEO)</h3>
+                <p>نحسن ترتيبك في نتائج البحث لزيادة الزيارات والعملاء</p>
+              </div>
+            </div>
+            <div class="service-box">
+              <i class="fa-solid fa-camera fa-3x"></i>
+              <div class="info">
+                <h3>تحليل البيانات</h3>
+                <p>نقدم لك تحليلات دقيقة تساعدك في اتخاذ قرارات مدروسة</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="container" id="testimonials">
+        <div class="testimonials">
+          <div class="section-heading">
+            <h2>أراء عملاءنا</h2>
+            <p>شاهد اخر اراء عملائنا</p>
+          </div>
+          <div class="content">
+            <img src="images/avatar-01.jpg" alt="" />
+            <div class="text">
+              <p>"فريق محترف وأفكار مبدعة، أوصي بهم بشدة."</p>
+              <span>- سامي، مدير تسويق</span>
+            </div>
+          </div>
+          <div class="content">
+            <img src="images/avatar-02.jpg" alt="" />
+            <div class="text">
+              <p>"ساهموا في زيادة مبيعاتنا خلال شهرين فقط، شكراً نوفا!"</p>
+              <span>- حسن، مندوب مبيعات</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="container">
+        <div class="contact-us">
+          <div class="section-heading">
+            <h2>تواصل معنا</h2>
+            <p>ساهم معنا في مشاركة رأيك</p>
+          </div>
+          <div class="content">
+            <form>
+              <input type="text" placeholder="الاسم الكامل" />
+              <input type="email" placeholder="البريد الإلكتروني" />
+              <input type="text" placeholder="موضوع الرسالة" />
+              <textarea placeholder="رسالتك" rows="5"></textarea>
+              <button type="submit">إرسال</button>
+            </form>
+            <div class="contact-info">
+              <div class="address">
+                <i class="fa-solid fa-location-dot"></i>
+                <div class="text">123 Street,New York, USA</div>
+              </div>
+              <div class="phone">
+                <i class="fa-solid fa-phone"></i>
+                <div class="text">+012 345 67890</div>
+              </div>
+              <div class="email">
+                <i class="fa-solid fa-envelope"></i>
+                <div class="text">info@example.com</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>© 2025 شركة نوفا للتسويق الرقمي</p>
+      <p>تابعنا على: Instagram | Facebook | LinkedIn</p>
+    </footer>
+  </body>
+</html>
